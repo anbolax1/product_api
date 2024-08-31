@@ -13,6 +13,6 @@ class Product extends Model
 
     public function properties()
     {
-        return $this->hasMany(ProductProperty::class);
+        return $this->belongsToMany(Property::class);
     }
 }

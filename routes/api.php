@@ -19,3 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/products', [\App\Http\Controllers\ProductController::class, 'index']);
+Route::get('/properties', [\App\Http\Controllers\PropertyController::class, 'index']);
+
+Route::post('/product', [\App\Http\Controllers\ProductController::class, 'create']);
+Route::post('/property', [\App\Http\Controllers\PropertyController::class, 'create']);

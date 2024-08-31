@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Product;
-use App\Models\ProductProperty;
+use App\Models\Property;
 use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
@@ -22,14 +22,14 @@ class ProductSeeder extends Seeder
                 ]
             );
 
-            ProductProperty::create(
+            Property::create(
                 [
                     'product_id' => $product->id,
                     'property_name' => 'color',
                     'property_value' => ['red', 'blue', 'yellow', 'violet', 'black', 'white'][rand(0, 5)],
                 ]
             );
-            ProductProperty::create(
+            Property::create(
                 [
                     'product_id' => $product->id,
                     'property_name' => 'brand',
